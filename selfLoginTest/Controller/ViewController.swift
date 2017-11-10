@@ -12,8 +12,12 @@ import FirebaseAuth
 import FirebaseDatabase
 import SwiftKeychainWrapper
 
-class ViewController: UIViewController {
+import FBSDKLoginKit
+import FBSDKCoreKit
+
+class ViewController: UIViewController, FBSDKLoginButtonDelegate{
     
+    @IBOutlet var buttonLoginWithFacebook: FBSDKLoginButton!
     @IBOutlet var emailField: UITextField!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var passwordField: UITextField!
@@ -22,8 +26,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,14 +54,14 @@ class ViewController: UIViewController {
         passwordField.setBottomBorder()
         
         buttonSignIn.backgroundColor = UIColor(white: 1, alpha: 0.0)
-        
         buttonSignIn.setBorders()
+        
+        self.buttonLoginWithFacebook.delegate = self
         
         if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID){
             print("Erkut: ID found in keychain")
             performSegue(withIdentifier: "GoToEmpty", sender: nil)
         }
-        
         
     }
     
@@ -116,6 +121,106 @@ class ViewController: UIViewController {
         print("Erkut: Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "GoToEmpty", sender: nil)
     }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        
+        print("Erkut : default facebook login button is tapped")
+        
+        if error != nil {
+            
+            if let errorMessage = error as NSError? {
+                
+                print("Erkut : facebook login has failed, errorMessage :\(errorMessage.userInfo)")
+                print("Erkut : facebook login has failed, errorMessage :\(errorMessage.localizedDescription)")
+                
+            }
+            
+        } else if result.isCancelled {
+            
+            print("Erkut : user is cancelled facebook login");
+            
+        } else {
+            
+            print("Erkut : user is start login process successfully")
+            
+            let credentials = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            
+            print("credentials : \(credentials)")
+            
+            startFirebaseAuthProcess(credentialTakenFromFacebook: credentials)
+            
+            let loggedInUserInfo = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: FBSDKAccessToken.current().tokenString, version: nil, httpMethod: "GET")
+            
+            loggedInUserInfo?.start(completionHandler: { (connection, result, error) in
+                
+                if error != nil {
+                    
+                    if let errorMessage = error as NSError? {
+                        
+                        print("Takasi bom bom : \(errorMessage.userInfo)")
+                        
+                    }
+                    
+                } else {
+                    
+                    print(result)
+                    
+                    if let resultString = result as? NSDictionary {
+                        
+                        if let emailText = resultString["email"] as? String {
+                            
+                            print("email : \(emailText)")
+                            
+                        }
+                        
+                        if let nameText = resultString["name"] as? String {
+                            
+                            print("name : \(nameText)")
+                            
+                        }
+                        
+                        if let IdText = resultString["id"] as? String {
+                            
+                            print("id : \(IdText)")
+                            
+                        }
+                        
+                    }
+                }
+            })
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        
+        print("loginButtonDidLogOut is tapped")
+        
+        
+        
+    }
+    
+    func startFirebaseAuthProcess(credentialTakenFromFacebook : AuthCredential){
+        
+        Auth.auth().signIn(with: credentialTakenFromFacebook) { (user, error) in
+            
+            if error != nil {
+                
+                if let errorMessage = error as NSError? {
+                    
+                    print("Erkut : firebase sign in has failed, errorMessage :\(errorMessage.userInfo)")
+                    print("Erkut : firebase sign in has failed, errorMessage :\(errorMessage.localizedDescription)")
+                    
+                }
+                
+            } else {
+                
+                print("Erkut : Firebase user signed up !")
+                
+            }
+            
+        }
+        
+    }
 }
 
 extension UITextField
@@ -142,5 +247,4 @@ extension UIButton {
         layer.borderWidth = 1
         layer.borderColor = UIColor.white.cgColor
     }
-    
 }
