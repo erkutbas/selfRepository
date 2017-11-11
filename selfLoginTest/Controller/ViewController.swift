@@ -49,7 +49,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         */
         
         getScreenBlur()
-        
+                
         emailField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
         passwordField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
 
@@ -67,7 +67,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID){
             print("Erkut: ID found in keychain")
-            //performSegue(withIdentifier: "goToProfilePage", sender: nil)
+            performSegue(withIdentifier: "goToProfileView", sender: nil)
         }
         
     }
@@ -163,6 +163,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         print("Erkut: Data saved to keychain \(keychainResult)")
         
         DataService.ds.createFirbaseDBUser(uid: id, userData: userDataDictionary.getUserDataAsDictionary())
+        
+        performSegue(withIdentifier: "goToProfileView", sender: self)
         
         
     }

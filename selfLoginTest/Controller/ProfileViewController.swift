@@ -10,10 +10,31 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var profileView: UIImageView!
+    @IBOutlet var nickNameFiedl: UITextField!
+    @IBOutlet var nameField: UITextField!
+    @IBOutlet var surNameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getScreenBlur()
+        
         // Do any additional setup after loading the view.
+        
+        nickNameFiedl.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        nameField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        surNameField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        
+        
+        nickNameFiedl.setBottomBorder()
+        nickNameFiedl.setBottomBorder()
+        
+        nameField.setBottomBorder()
+        nameField.setBottomBorder()
+        
+        surNameField.setBottomBorder()
+        surNameField.setBottomBorder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +42,35 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        
+        getScreenBlur()
+        
+        
+        nickNameFiedl.setBottomBorder()
+        nickNameFiedl.setBottomBorder()
+        
+        nameField.setBottomBorder()
+        nameField.setBottomBorder()
+        
+        surNameField.setBottomBorder()
+        surNameField.setBottomBorder()
+        
+    }*/
+    
+    func getScreenBlur() {
+        
+        //let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = profileView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        profileView.addSubview(blurEffectView)
+        
     }
-    */
+    
 
 }
+
+

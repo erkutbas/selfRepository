@@ -75,7 +75,7 @@
                         <outlet property="emailField" destination="YGW-JD-Mni" id="6wF-3M-0uK"/>
                         <outlet property="mainImageView" destination="tWH-h2-Q5s" id="qGM-ZY-VC2"/>
                         <outlet property="passwordField" destination="P4j-zR-A1k" id="KRM-TO-6tJ"/>
-                        <segue destination="JJi-5J-Ibk" kind="show" identifier="goToProfilePage" id="dDu-JS-xID"/>
+                        <segue destination="LAU-dw-QLK" kind="show" identifier="goToProfileView" id="VAI-iU-Zl3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,12 +83,56 @@
             <point key="canvasLocation" x="-1287.2" y="177.66116941529236"/>
         </scene>
         <!--Profile View Controller-->
-        <scene sceneID="o8X-jN-6ln">
+        <scene sceneID="WGV-hk-Tca">
             <objects>
-                <viewController id="JJi-5J-Ibk" customClass="ProfileViewController" customModule="selfLoginTest" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FIl-62-5wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="LAU-dw-QLK" customClass="ProfileViewController" customModule="selfLoginTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aOF-zV-hBG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r4T-Wf-iKF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-MR-PWa">
+                                <rect key="frame" x="16" y="281" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u0F-lW-f74">
+                                <rect key="frame" x="16" y="334" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7T-Sy-8fd">
+                                <rect key="frame" x="16" y="387" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nd7-nX-mTy">
+                                <rect key="frame" x="16" y="438" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="HdF-mA-C0l"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="u0F-lW-f74" id="qTx-Fb-mYG"/>
+                        <outlet property="nickNameFiedl" destination="lKO-MR-PWa" id="t6X-kN-aBd"/>
+                        <outlet property="profileView" destination="r4T-Wf-iKF" id="gC1-On-BCF"/>
+                        <outlet property="surNameField" destination="l7T-Sy-8fd" id="EbF-Ju-E58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPB-y8-6e7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-182" y="178"/>
+            <point key="canvasLocation" x="-466.39999999999998" y="177.66116941529236"/>
         </scene>
     </scenes>
     <resources>
