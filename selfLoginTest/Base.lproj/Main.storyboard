@@ -56,6 +56,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5m-cI-dpk" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="16" y="501" width="343" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTN-yq-wN9">
+                                <rect key="frame" x="16" y="562" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
@@ -65,6 +71,7 @@
                     <connections>
                         <outlet property="buttonLoginWithFacebook" destination="A5m-cI-dpk" id="x5a-fD-iUV"/>
                         <outlet property="buttonSignIn" destination="9LM-Wa-a94" id="65N-pP-TjO"/>
+                        <outlet property="customButton" destination="cTN-yq-wN9" id="LGf-HI-IOX"/>
                         <outlet property="emailField" destination="YGW-JD-Mni" id="6wF-3M-0uK"/>
                         <outlet property="mainImageView" destination="tWH-h2-Q5s" id="qGM-ZY-VC2"/>
                         <outlet property="passwordField" destination="P4j-zR-A1k" id="KRM-TO-6tJ"/>
@@ -73,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-34.399999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-1287.2" y="177.66116941529236"/>
         </scene>
         <!--Empty View Controller-->
         <scene sceneID="o8X-jN-6ln">
@@ -99,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIl-62-5wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="133"/>
+            <point key="canvasLocation" x="630" y="116"/>
         </scene>
     </scenes>
     <resources>

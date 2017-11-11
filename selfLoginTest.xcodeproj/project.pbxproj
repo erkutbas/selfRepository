@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */; };
 		A75F583D1FB20DC5006C39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F583C1FB20DC5006C39A5 /* AppDelegate.swift */; };
 		A75F583F1FB20DC5006C39A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F583E1FB20DC5006C39A5 /* ViewController.swift */; };
 		A75F58421FB20DC5006C39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F58401FB20DC5006C39A5 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		03941412AD77ED5DE4F72359 /* Pods-selfLoginTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfLoginTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-selfLoginTest/Pods-selfLoginTest.release.xcconfig"; sourceTree = "<group>"; };
+		A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A75F58391FB20DC5006C39A5 /* selfLoginTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = selfLoginTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F583C1FB20DC5006C39A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F583E1FB20DC5006C39A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				A75F583E1FB20DC5006C39A5 /* ViewController.swift */,
 				A75F586D1FB2BF57006C39A5 /* emptyViewController.swift */,
+				A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,9 +308,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-selfLoginTest/Pods-selfLoginTest-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -327,6 +334,7 @@
 				A75F586C1FB2BDCB006C39A5 /* Constants.swift in Sources */,
 				A75F585F1FB264AF006C39A5 /* emailTextField.swift in Sources */,
 				A75F583F1FB20DC5006C39A5 /* ViewController.swift in Sources */,
+				A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */,
 				A75F585D1FB2646B006C39A5 /* emailTextView.swift in Sources */,
 				A75F583D1FB20DC5006C39A5 /* AppDelegate.swift in Sources */,
 			);

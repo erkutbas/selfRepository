@@ -11,6 +11,9 @@ import Firebase
 import FirebaseAuth
 import FBSDKLoginKit
 
+import Fabric
+import TwitterKit
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,9 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        print("----------")
+        
         FirebaseApp.configure()
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //Fabric.with([Twitter.self])
+        Twitter.sharedInstance().start(withConsumerKey: "hIEV6LDAOPaZouhmioFEEGFzZ", consumerSecret: "Jo8D5a7pFnBELZ5NVH71g2uSeHHGe0qEg3LzLsLKRK9wXrsZZm")
         
         return true
     }
@@ -55,5 +63,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        print("Twitter appdelegate func2")
+                
+        return Twitter.sharedInstance().application(app, open: url, options: options)
+    }
+    
+    
+    
 }
 

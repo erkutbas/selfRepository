@@ -14,5 +14,7 @@ target 'selfLoginTest' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKCoreKit'
   pod 'SwiftKeychainWrapper'
+  pod 'TwitterKit'
+  pod 'Fabric'
 
 end

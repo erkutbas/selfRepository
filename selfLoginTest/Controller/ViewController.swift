@@ -15,13 +15,17 @@ import SwiftKeychainWrapper
 import FBSDKLoginKit
 import FBSDKCoreKit
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate{
+import TwitterKit
+
+
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet var buttonLoginWithFacebook: FBSDKLoginButton!
     @IBOutlet var emailField: UITextField!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var buttonSignIn: buttonView!
+    @IBOutlet var customButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +61,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
         buttonSignIn.setBorders()
         
         self.buttonLoginWithFacebook.delegate = self
+        
+        takasi()
+        //takasi_2()
         
         if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID){
             print("Erkut: ID found in keychain")
@@ -217,10 +224,85 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
                 print("Erkut : Firebase user signed up !")
                 
             }
-            
         }
+    }
+    
+    
+    
+    func takasi() {
+        
+        print("takasi starts")
+        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
+            
+            print("takasi bombom")
+            
+            if (session != nil) {
+                print("signed in as \(session?.userName)");
+                
+                if let sessionObject = session as TWTRSession? {
+                    
+                    let authToken = sessionObject.authToken
+                    let authTokenSecret = sessionObject.authTokenSecret
+                    
+                    let credential = TwitterAuthProvider.credential(withToken: authToken, secret: authTokenSecret)
+                    
+                    Auth.auth().signIn(with: credential, completion: { (user, error) in
+                        
+                        if error != nil {
+                            
+                            if let errorMessage = error as NSError? {
+                                
+                                print("errorrrrrr twitter 1 : \(errorMessage)")
+                                print("errorrrrrr twitter 2 : \(errorMessage.localizedDescription)")
+                                print("errorrrrrr twitter 3 : \(errorMessage.userInfo)")
+                                
+                            }
+                            
+                        } else {
+                            
+                            print("şak şak spor")
+                        }
+                        
+                    })
+                    
+                }
+                
+            } else {
+                print("error: \(error?.localizedDescription)");
+            }
+        })
+        
+        //logInButton.center = self.view.center
+        //self.view.addSubview(logInButton)
+        
+        logInButton.frame = CGRect(x: 1, y: 1, width: 343, height: 43)
+        self.customButton.addSubview(logInButton)
+
+        
         
     }
+    
+    func takasi_2() {
+        
+        let imageAttachment =  NSTextAttachment()
+        //imageAttachment.image = UIImage(named:"ic_mail.png")
+        imageAttachment.image = UIImage(named: "ic_mail")
+        //Set bound to reposition
+        let imageOffsetY:CGFloat = -5.0;
+        imageAttachment.bounds = CGRect(x: 0, y: imageOffsetY, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
+        //Create string with attachment
+        let attachmentString = NSAttributedString(attachment: imageAttachment)
+        //Initialize mutable string
+        let completeText = NSMutableAttributedString(string: "")
+        //Add image to mutable string
+        completeText.append(attachmentString)
+        //Add your text to mutable string
+        let  textAfterIcon = NSMutableAttributedString(string: "erkut")
+        completeText.append(textAfterIcon)
+        self.emailField.textAlignment = .center;
+        self.emailField.attributedText = completeText;
+    }
+    
 }
 
 extension UITextField
