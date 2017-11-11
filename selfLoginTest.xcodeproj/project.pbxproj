@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A711E2681FB76CB800236DAD /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711E2671FB76CB800236DAD /* Users.swift */; };
+		A711E26A1FB7735F00236DAD /* UserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711E2691FB7735F00236DAD /* UserStructure.swift */; };
 		A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */; };
+		A71FD12F1FB75EE600BE70CB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12E1FB75EE600BE70CB /* DataService.swift */; };
 		A75F583D1FB20DC5006C39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F583C1FB20DC5006C39A5 /* AppDelegate.swift */; };
 		A75F583F1FB20DC5006C39A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F583E1FB20DC5006C39A5 /* ViewController.swift */; };
 		A75F58421FB20DC5006C39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F58401FB20DC5006C39A5 /* Main.storyboard */; };
@@ -26,13 +29,15 @@
 		A75F58671FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A75F58661FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */; };
 		A75F58691FB2BA45006C39A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A75F58681FB2BA45006C39A5 /* GoogleService-Info.plist */; };
 		A75F586C1FB2BDCB006C39A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F586B1FB2BDCB006C39A5 /* Constants.swift */; };
-		A75F586E1FB2BF57006C39A5 /* emptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F586D1FB2BF57006C39A5 /* emptyViewController.swift */; };
 		F0FAFFB9208FFEAD84CF2AD8 /* Pods_selfLoginTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB11521684593FCDA1F1E6BA /* Pods_selfLoginTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03941412AD77ED5DE4F72359 /* Pods-selfLoginTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfLoginTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-selfLoginTest/Pods-selfLoginTest.release.xcconfig"; sourceTree = "<group>"; };
+		A711E2671FB76CB800236DAD /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		A711E2691FB7735F00236DAD /* UserStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructure.swift; sourceTree = "<group>"; };
 		A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A71FD12E1FB75EE600BE70CB /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A75F58391FB20DC5006C39A5 /* selfLoginTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = selfLoginTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F583C1FB20DC5006C39A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F583E1FB20DC5006C39A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +58,6 @@
 		A75F58661FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; sourceTree = "<group>"; };
 		A75F58681FB2BA45006C39A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A75F586B1FB2BDCB006C39A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A75F586D1FB2BF57006C39A5 /* emptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyViewController.swift; sourceTree = "<group>"; };
 		D4CC65118EFF58AD98408814 /* Pods-selfLoginTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfLoginTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-selfLoginTest/Pods-selfLoginTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DB11521684593FCDA1F1E6BA /* Pods_selfLoginTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_selfLoginTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +91,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A71FD12D1FB75EC700BE70CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A71FD12E1FB75EE600BE70CB /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A75F58301FB20DC5006C39A5 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 		A75F583B1FB20DC5006C39A5 /* selfLoginTest */ = {
 			isa = PBXGroup;
 			children = (
+				A71FD12D1FB75EC700BE70CB /* Services */,
 				A75F586A1FB2BDC0006C39A5 /* Utils */,
 				A75F58591FB25C08006C39A5 /* Model */,
 				A75F584E1FB232AF006C39A5 /* View */,
@@ -152,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				A75F583E1FB20DC5006C39A5 /* ViewController.swift */,
-				A75F586D1FB2BF57006C39A5 /* emptyViewController.swift */,
 				A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -161,6 +173,8 @@
 		A75F58591FB25C08006C39A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A711E2671FB76CB800236DAD /* Users.swift */,
+				A711E2691FB7735F00236DAD /* UserStructure.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,13 +342,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71FD12F1FB75EE600BE70CB /* DataService.swift in Sources */,
 				A75F58651FB26DA2006C39A5 /* buttonView.swift in Sources */,
+				A711E2681FB76CB800236DAD /* Users.swift in Sources */,
 				A75F58501FB232C6006C39A5 /* mainView.swift in Sources */,
-				A75F586E1FB2BF57006C39A5 /* emptyViewController.swift in Sources */,
 				A75F586C1FB2BDCB006C39A5 /* Constants.swift in Sources */,
 				A75F585F1FB264AF006C39A5 /* emailTextField.swift in Sources */,
 				A75F583F1FB20DC5006C39A5 /* ViewController.swift in Sources */,
 				A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */,
+				A711E26A1FB7735F00236DAD /* UserStructure.swift in Sources */,
 				A75F585D1FB2646B006C39A5 /* emailTextView.swift in Sources */,
 				A75F583D1FB20DC5006C39A5 /* AppDelegate.swift in Sources */,
 			);

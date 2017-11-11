@@ -67,7 +67,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID){
             print("Erkut: ID found in keychain")
-            performSegue(withIdentifier: "GoToEmpty", sender: nil)
+            //performSegue(withIdentifier: "goToProfilePage", sender: nil)
         }
         
     }
@@ -87,13 +87,22 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         print("Erkut : singInButton is tapped")
         
+        let userDataRetrived = UserStructure()
+        
+        userDataRetrived.setEmailAddress(email: emailField.text!)
+        
         if let email = emailField.text, let pwd = passwordField.text {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("Erkut: Email user authenticated with Firebase")
                     if let user = user {
                         let userData = ["provider": user.providerID]
-                        self.completeSignIn(id: user.uid, userData: userData)
+                        print("userData : \(userData)")
+
+                        userDataRetrived.setUserID(userID: user.uid)
+                        
+                        //self.completeSignIn(id: user.uid, userData: userData)
+                        self.completeSignInWithFaceOrTwitter(id: user.uid, userData: userDataRetrived)
                     }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -111,8 +120,17 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         } else {
                             print("Erkut: Successfully authenticated with Firebase")
                             if let user = user {
-                                let userData = ["provider": user.providerID]
-                                self.completeSignIn(id: user.uid, userData: userData)
+                                let userData = ["provider": user.providerID, "takasi" : "takasiValue", "takasi_2" : "takasi_2_Value"]
+                                
+                                print("userData : \(userData)")
+                                
+                                userDataRetrived.setUserID(userID: user.uid)
+
+                                
+                                //self.completeSignIn(id: user.uid, userData: userData)
+                                self.completeSignInWithFaceOrTwitter(id: user.uid, userData: userDataRetrived)
+
+                                
                             }
                         }
                     })
@@ -122,16 +140,39 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
-        //DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
+        DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
         //let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
         print("Erkut: Data saved to keychain \(keychainResult)")
-        performSegue(withIdentifier: "GoToEmpty", sender: nil)
+        //performSegue(withIdentifier: "goToProfilePage", sender: nil)
     }
+    
+    func completeSignInWithFaceOrTwitter(id: String, userData : UserStructure) {
+        
+        print("id : \(id)")
+        print("userdata : \(userData.userEmail)")
+        print("userdata : \(userData.userID)")
+        
+        var userDataDictionary = Users()
+        
+        userDataDictionary.addUserData(userInfo: userData)
+        
+        print("completeSignInWithFaceOrTwitter starts")
+        
+        let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
+        print("Erkut: Data saved to keychain \(keychainResult)")
+        
+        DataService.ds.createFirbaseDBUser(uid: id, userData: userDataDictionary.getUserDataAsDictionary())
+        
+        
+    }
+    
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         
         print("Erkut : default facebook login button is tapped")
+        
+        let userDataRetrived = UserStructure()
         
         if error != nil {
             
@@ -156,6 +197,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             startFirebaseAuthProcess(credentialTakenFromFacebook: credentials)
             
+            print("____________credential : \(credentials.provider)")
+            print("____________credential : \(FBSDKAccessToken.current().tokenString)")
+            userDataRetrived.setUserID(userID: FBSDKAccessToken.current().tokenString)
+            
             let loggedInUserInfo = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: FBSDKAccessToken.current().tokenString, version: nil, httpMethod: "GET")
             
             loggedInUserInfo?.start(completionHandler: { (connection, result, error) in
@@ -178,6 +223,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                             
                             print("email : \(emailText)")
                             
+                            userDataRetrived.setEmailAddress(email: emailText)
+                            
                         }
                         
                         if let nameText = resultString["name"] as? String {
@@ -191,11 +238,14 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                             print("id : \(IdText)")
                             
                         }
-                        
                     }
+                    
+                    
                 }
             })
         }
+        
+        completeSignInWithFaceOrTwitter(id: userDataRetrived.userID, userData: userDataRetrived)
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {

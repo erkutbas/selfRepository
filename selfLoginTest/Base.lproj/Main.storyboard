@@ -75,38 +75,20 @@
                         <outlet property="emailField" destination="YGW-JD-Mni" id="6wF-3M-0uK"/>
                         <outlet property="mainImageView" destination="tWH-h2-Q5s" id="qGM-ZY-VC2"/>
                         <outlet property="passwordField" destination="P4j-zR-A1k" id="KRM-TO-6tJ"/>
-                        <segue destination="JJi-5J-Ibk" kind="show" identifier="GoToEmpty" id="dDu-JS-xID"/>
+                        <segue destination="JJi-5J-Ibk" kind="show" identifier="goToProfilePage" id="dDu-JS-xID"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1287.2" y="177.66116941529236"/>
         </scene>
-        <!--Empty View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="o8X-jN-6ln">
             <objects>
-                <viewController id="JJi-5J-Ibk" customClass="emptyViewController" customModule="selfLoginTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uUL-em-GrB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fI-5I-B3h">
-                                <rect key="frame" x="160" y="318" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="logOutButton:" destination="JJi-5J-Ibk" eventType="touchUpInside" id="hbF-Ya-qts"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="jrY-4N-qZs"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="b5g-Ez-wFB"/>
-                    </view>
-                </viewController>
+                <viewController id="JJi-5J-Ibk" customClass="ProfileViewController" customModule="selfLoginTest" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIl-62-5wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="116"/>
+            <point key="canvasLocation" x="-182" y="178"/>
         </scene>
     </scenes>
     <resources>
