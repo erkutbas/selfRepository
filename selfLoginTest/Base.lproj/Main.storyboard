@@ -1,20 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SZD-ob-uGa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
         </array>
     </customFonts>
     <scenes>
+        <!--Start Login Or Signin View Controller-->
+        <scene sceneID="aNL-JO-Jbr">
+            <objects>
+                <viewController id="k26-vu-pOS" customClass="StartLoginOrSigninViewController" customModule="selfLoginTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SKh-mC-SPK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Road scenery Galaxy S8 Wallpapers copy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D33-3m-qgN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sQS-kS-yXB">
+                                <rect key="frame" x="16" y="550" width="340" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYv-1G-BgU" customClass="buttonView" customModule="selfLoginTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="40"/>
+                                        <color key="backgroundColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="LOG IN">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButton:" destination="k26-vu-pOS" eventType="touchUpInside" id="0pO-br-iYV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCf-ZA-k5j" customClass="buttonView" customModule="selfLoginTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="340" height="43"/>
+                                        <color key="backgroundColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="kDu-9d-2pu"/>
+                                            <constraint firstAttribute="height" constant="43" id="m3Z-Cr-lzc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Create Account">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createAccountButton:" destination="k26-vu-pOS" eventType="touchUpInside" id="Cpb-fd-sgB"/>
+                                            <action selector="singInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ht-Yr-xxn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DCf-ZA-k5j" secondAttribute="trailing" id="E0S-ar-eIA"/>
+                                    <constraint firstItem="DCf-ZA-k5j" firstAttribute="leading" secondItem="sQS-kS-yXB" secondAttribute="leading" id="V58-Q3-m1c"/>
+                                    <constraint firstAttribute="bottom" secondItem="DCf-ZA-k5j" secondAttribute="bottom" id="kYQ-Gc-8qF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bGS-4k-dHq" firstAttribute="bottom" secondItem="sQS-kS-yXB" secondAttribute="bottom" constant="24" id="JqB-vT-TyJ"/>
+                            <constraint firstItem="sQS-kS-yXB" firstAttribute="leading" secondItem="SKh-mC-SPK" secondAttribute="leadingMargin" id="fMA-L7-x2N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bGS-4k-dHq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YYP-tc-G97"/>
+                    <connections>
+                        <outlet property="loginButton" destination="nYv-1G-BgU" id="jZM-l9-R5R"/>
+                        <outlet property="signinButton" destination="DCf-ZA-k5j" id="Yuh-rq-g1O"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="gotoLoginView" id="hCs-Cc-Jsd"/>
+                        <segue destination="LAU-dw-QLK" kind="show" identifier="gotoSigninView" id="1Up-H8-7by"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVi-KQ-GUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1436" y="177.66116941529236"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,7 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tWH-h2-Q5s">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Road scenery Galaxy S8 Wallpapers copy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tWH-h2-Q5s">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -75,12 +146,11 @@
                         <outlet property="emailField" destination="YGW-JD-Mni" id="6wF-3M-0uK"/>
                         <outlet property="mainImageView" destination="tWH-h2-Q5s" id="qGM-ZY-VC2"/>
                         <outlet property="passwordField" destination="P4j-zR-A1k" id="KRM-TO-6tJ"/>
-                        <segue destination="LAU-dw-QLK" kind="show" identifier="goToProfileView" id="VAI-iU-Zl3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1287.2" y="177.66116941529236"/>
+            <point key="canvasLocation" x="-1436" y="1020.5397301349326"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="WGV-hk-Tca">
@@ -115,10 +185,6 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nd7-nX-mTy">
-                                <rect key="frame" x="16" y="438" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="HdF-mA-C0l"/>
@@ -132,10 +198,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPB-y8-6e7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466.39999999999998" y="177.66116941529236"/>
+            <point key="canvasLocation" x="-414" y="178"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1IK-cs-G8x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SZD-ob-uGa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GUK-pZ-3CM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k26-vu-pOS" kind="relationship" relationship="rootViewController" id="7bC-gg-Q5i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5m4-HY-Ow4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2322" y="178"/>
         </scene>
     </scenes>
     <resources>
         <image name="556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg" width="310" height="550"/>
+        <image name="Road scenery Galaxy S8 Wallpapers copy.jpg" width="1440" height="2560"/>
     </resources>
 </document>

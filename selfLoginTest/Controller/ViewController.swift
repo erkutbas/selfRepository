@@ -31,6 +31,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.navigationController?.isNavigationBarHidden = false
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,9 +40,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    
     override func viewDidAppear(_ animated: Bool) {
         
         print("viewDidAppear is activated")
+        
         
         /*
         emailText.setValue(UIColor.init(red: 80/255, green: 80/255, blue: 80/255, alpha: 1.0), forKeyPath: "_placeholderLabel.textColor")
@@ -48,7 +52,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         passwordText.setValue(UIColor.init(red: 80/255, green: 80/255, blue: 80/255, alpha: 1.0), forKeyPath: "_placeholderLabel.textColor")
         */
         
-        getScreenBlur()
+        //getScreenBlur()
                 
         emailField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
         passwordField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
@@ -67,10 +71,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID){
             print("Erkut: ID found in keychain")
-            performSegue(withIdentifier: "goToProfileView", sender: nil)
+            //performSegue(withIdentifier: "goToProfileView", sender: nil)
         }
         
     }
+ 
     
     func getScreenBlur() {
         
@@ -357,28 +362,4 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
 }
 
-extension UITextField
-{
-    func setBottomBorder()
-    {
-        self.borderStyle = UITextBorderStyle.none;
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.white.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - width,   width:  self.frame.size.width, height: self.frame.size.height)
-        
-        border.borderWidth = width
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-    }
-}
 
-extension UIButton {
-    
-    func setBorders()
-    {
-        layer.cornerRadius = 5
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.white.cgColor
-    }
-}

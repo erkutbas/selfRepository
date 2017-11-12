@@ -11,6 +11,11 @@
 		A711E26A1FB7735F00236DAD /* UserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711E2691FB7735F00236DAD /* UserStructure.swift */; };
 		A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */; };
 		A71FD12F1FB75EE600BE70CB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12E1FB75EE600BE70CB /* DataService.swift */; };
+		A7258E6D1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7258E6C1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg */; };
+		A7258E8D1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7258E8C1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift */; };
+		A7258E931FB8E2C30075B557 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7258E921FB8E2C30075B557 /* TextFieldExtension.swift */; };
+		A7258E951FB8E3470075B557 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7258E941FB8E3470075B557 /* ButtonExtension.swift */; };
+		A72626E51FB8D261000CA5A4 /* Road scenery Galaxy S8 Wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72626E41FB8D260000CA5A4 /* Road scenery Galaxy S8 Wallpapers.jpg */; };
 		A75F583D1FB20DC5006C39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F583C1FB20DC5006C39A5 /* AppDelegate.swift */; };
 		A75F583F1FB20DC5006C39A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F583E1FB20DC5006C39A5 /* ViewController.swift */; };
 		A75F58421FB20DC5006C39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F58401FB20DC5006C39A5 /* Main.storyboard */; };
@@ -38,6 +43,11 @@
 		A711E2691FB7735F00236DAD /* UserStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructure.swift; sourceTree = "<group>"; };
 		A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A71FD12E1FB75EE600BE70CB /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A7258E6C1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Road scenery Galaxy S8 Wallpapers copy.jpg"; sourceTree = "<group>"; };
+		A7258E8C1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLoginOrSigninViewController.swift; sourceTree = "<group>"; };
+		A7258E921FB8E2C30075B557 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		A7258E941FB8E3470075B557 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		A72626E41FB8D260000CA5A4 /* Road scenery Galaxy S8 Wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Road scenery Galaxy S8 Wallpapers.jpg"; sourceTree = "<group>"; };
 		A75F58391FB20DC5006C39A5 /* selfLoginTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = selfLoginTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F583C1FB20DC5006C39A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F583E1FB20DC5006C39A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				A71FD12E1FB75EE600BE70CB /* DataService.swift */,
+				A7258E921FB8E2C30075B557 /* TextFieldExtension.swift */,
+				A7258E941FB8E3470075B557 /* ButtonExtension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -150,6 +162,8 @@
 		A75F58511FB2340E006C39A5 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				A7258E6C1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg */,
+				A72626E41FB8D260000CA5A4 /* Road scenery Galaxy S8 Wallpapers.jpg */,
 				A75F58661FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */,
 				A75F58621FB2674B006C39A5 /* b146263e11ec6f7ba36550057e2e2ff0.jpg */,
 				A75F58601FB266B5006C39A5 /* b174ca6f3ed7a9a9fcead9796d00cac8.jpg */,
@@ -166,6 +180,7 @@
 			children = (
 				A75F583E1FB20DC5006C39A5 /* ViewController.swift */,
 				A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */,
+				A7258E8C1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75F58471FB20DC5006C39A5 /* LaunchScreen.storyboard in Resources */,
+				A7258E6D1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg in Resources */,
 				A75F58441FB20DC5006C39A5 /* Assets.xcassets in Resources */,
 				A75F58531FB234A5006C39A5 /* clay-banks-294117.jpg in Resources */,
+				A72626E51FB8D261000CA5A4 /* Road scenery Galaxy S8 Wallpapers.jpg in Resources */,
 				A75F58551FB257B3006C39A5 /* w-7156.jpg in Resources */,
 				A75F585B1FB25F2F006C39A5 /* 6c42bfd980efe92add899a6128ed4b05--travel-maps-travel-bug.jpg in Resources */,
 				A75F58611FB266B5006C39A5 /* b174ca6f3ed7a9a9fcead9796d00cac8.jpg in Resources */,
@@ -349,7 +366,10 @@
 				A75F586C1FB2BDCB006C39A5 /* Constants.swift in Sources */,
 				A75F585F1FB264AF006C39A5 /* emailTextField.swift in Sources */,
 				A75F583F1FB20DC5006C39A5 /* ViewController.swift in Sources */,
+				A7258E951FB8E3470075B557 /* ButtonExtension.swift in Sources */,
 				A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */,
+				A7258E8D1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift in Sources */,
+				A7258E931FB8E2C30075B557 /* TextFieldExtension.swift in Sources */,
 				A711E26A1FB7735F00236DAD /* UserStructure.swift in Sources */,
 				A75F585D1FB2646B006C39A5 /* emailTextView.swift in Sources */,
 				A75F583D1FB20DC5006C39A5 /* AppDelegate.swift in Sources */,
