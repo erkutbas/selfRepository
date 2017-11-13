@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A711E2681FB76CB800236DAD /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711E2671FB76CB800236DAD /* Users.swift */; };
 		A711E26A1FB7735F00236DAD /* UserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711E2691FB7735F00236DAD /* UserStructure.swift */; };
+		A71C7EA61FB91856004251D6 /* CreateNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C7EA51FB91856004251D6 /* CreateNewAccountViewController.swift */; };
 		A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */; };
 		A71FD12F1FB75EE600BE70CB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12E1FB75EE600BE70CB /* DataService.swift */; };
 		A7258E6D1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7258E6C1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg */; };
@@ -41,6 +42,7 @@
 		03941412AD77ED5DE4F72359 /* Pods-selfLoginTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfLoginTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-selfLoginTest/Pods-selfLoginTest.release.xcconfig"; sourceTree = "<group>"; };
 		A711E2671FB76CB800236DAD /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		A711E2691FB7735F00236DAD /* UserStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructure.swift; sourceTree = "<group>"; };
+		A71C7EA51FB91856004251D6 /* CreateNewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountViewController.swift; sourceTree = "<group>"; };
 		A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A71FD12E1FB75EE600BE70CB /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A7258E6C1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Road scenery Galaxy S8 Wallpapers copy.jpg"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				A75F583E1FB20DC5006C39A5 /* ViewController.swift */,
 				A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */,
 				A7258E8C1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift */,
+				A71C7EA51FB91856004251D6 /* CreateNewAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				A7258E951FB8E3470075B557 /* ButtonExtension.swift in Sources */,
 				A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */,
 				A7258E8D1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift in Sources */,
+				A71C7EA61FB91856004251D6 /* CreateNewAccountViewController.swift in Sources */,
 				A7258E931FB8E2C30075B557 /* TextFieldExtension.swift in Sources */,
 				A711E26A1FB7735F00236DAD /* UserStructure.swift in Sources */,
 				A75F585D1FB2646B006C39A5 /* emailTextView.swift in Sources */,

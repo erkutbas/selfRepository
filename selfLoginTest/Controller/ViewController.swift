@@ -33,6 +33,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         self.navigationController?.isNavigationBarHidden = false
         
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +54,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         passwordText.setValue(UIColor.init(red: 80/255, green: 80/255, blue: 80/255, alpha: 1.0), forKeyPath: "_placeholderLabel.textColor")
         */
         
-        //getScreenBlur()
+        getScreenBlur()
                 
         emailField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
         passwordField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
@@ -88,6 +90,14 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
     }
 
+    
+    /*
+     action buttons
+     */
+    
+    /*
+     default sign in button
+     */
     @IBAction func singInButton(_ sender: UIButton) {
         
         print("Erkut : singInButton is tapped")
@@ -118,7 +128,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                                 
                                 print("Erkut : errorMessage : \(errorMessage.userInfo)")
                                 print("Erkut : errorMessage : \(errorMessage)")
-
                                 
                             }
                             
@@ -144,6 +153,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
+    /*
+     after sign in complete call to create firebase database attribute and create a keychainwrapper
+     */
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
         //let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
@@ -173,7 +185,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         
     }
-    
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         
