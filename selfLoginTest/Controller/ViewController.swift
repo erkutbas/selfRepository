@@ -33,6 +33,27 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         self.navigationController?.isNavigationBarHidden = false
         
+        getScreenBlur()
+        
+        emailField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        passwordField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        
+        
+        emailField.setBottomBorder()
+        passwordField.setBottomBorder()
+        
+        buttonSignIn.backgroundColor = UIColor(white: 1, alpha: 0.0)
+        buttonSignIn.setBorders()
+        
+        self.buttonLoginWithFacebook.delegate = self
+        
+        takasi()
+        //takasi_2()
+        
+        if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID){
+            print("Erkut: ID found in keychain")
+            //performSegue(withIdentifier: "goToProfileView", sender: nil)
+        }
         
         
     }
@@ -42,7 +63,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    
+    /*
     override func viewDidAppear(_ animated: Bool) {
         
         print("viewDidAppear is activated")
@@ -77,6 +98,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
     }
+ */
  
     
     func getScreenBlur() {
@@ -179,9 +201,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
         print("Erkut: Data saved to keychain \(keychainResult)")
         
-        DataService.ds.createFirbaseDBUser(uid: id, userData: userDataDictionary.getUserDataAsDictionary())
+        //DataService.ds.createFirbaseDBUser(uid: id, userData: userDataDictionary.getUserDataAsDictionary())
         
-        performSegue(withIdentifier: "goToProfileView", sender: self)
+        //performSegue(withIdentifier: "goToProfileView", sender: self)
         
         
     }

@@ -11,20 +11,18 @@ import Firebase
 import FirebaseAuth
 import FBSDKLoginKit
 
-import Fabric
 import TwitterKit
+import FirebaseDynamicLinks
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         print("----------")
-        
         FirebaseApp.configure()
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -57,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    /*
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         
         print("Erkut : AppDelegate application func_2 called")
@@ -69,9 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Twitter appdelegate func2")
                 
         return Twitter.sharedInstance().application(app, open: url, options: options)
-    }
-    
-    
+    }*/
     
 }
 

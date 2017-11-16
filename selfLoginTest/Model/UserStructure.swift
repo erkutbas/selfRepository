@@ -14,6 +14,7 @@ class UserStructure {
     private var _userID : String
     private var _userEmail : String
     
+    
     var userID : String {
         
         return _userID

@@ -12,6 +12,7 @@ class StartLoginOrSigninViewController: UIViewController {
 
     @IBOutlet var loginButton: buttonView!
     @IBOutlet var signinButton: buttonView!
+    @IBOutlet var mainImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class StartLoginOrSigninViewController: UIViewController {
         
         setButtonBorders()
         setButtonBackgroundColor()
-        
+        getScreenBlur()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +58,17 @@ class StartLoginOrSigninViewController: UIViewController {
     private func enableRootNavigationBar() {
         
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    private func getScreenBlur() {
+        
+        //let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = mainImage.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mainImage.addSubview(blurEffectView)
+        
     }
     
     /*

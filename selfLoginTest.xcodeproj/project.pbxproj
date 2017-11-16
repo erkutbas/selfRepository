@@ -12,6 +12,7 @@
 		A71C7EA61FB91856004251D6 /* CreateNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C7EA51FB91856004251D6 /* CreateNewAccountViewController.swift */; };
 		A71FD12C1FB75BA600BE70CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */; };
 		A71FD12F1FB75EE600BE70CB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FD12E1FB75EE600BE70CB /* DataService.swift */; };
+		A724964F1FBB32FE009E761F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A724964E1FBB32FE009E761F /* GoogleService-Info.plist */; };
 		A7258E6D1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7258E6C1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg */; };
 		A7258E8D1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7258E8C1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift */; };
 		A7258E931FB8E2C30075B557 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7258E921FB8E2C30075B557 /* TextFieldExtension.swift */; };
@@ -33,8 +34,8 @@
 		A75F58631FB2674B006C39A5 /* b146263e11ec6f7ba36550057e2e2ff0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A75F58621FB2674B006C39A5 /* b146263e11ec6f7ba36550057e2e2ff0.jpg */; };
 		A75F58651FB26DA2006C39A5 /* buttonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F58641FB26DA2006C39A5 /* buttonView.swift */; };
 		A75F58671FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A75F58661FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */; };
-		A75F58691FB2BA45006C39A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A75F58681FB2BA45006C39A5 /* GoogleService-Info.plist */; };
 		A75F586C1FB2BDCB006C39A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F586B1FB2BDCB006C39A5 /* Constants.swift */; };
+		A7DFD2661FBDFC5F00132175 /* ServiceSwiftKeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFD2651FBDFC5F00132175 /* ServiceSwiftKeychainWrapper.swift */; };
 		F0FAFFB9208FFEAD84CF2AD8 /* Pods_selfLoginTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB11521684593FCDA1F1E6BA /* Pods_selfLoginTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		A71C7EA51FB91856004251D6 /* CreateNewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountViewController.swift; sourceTree = "<group>"; };
 		A71FD12B1FB75BA600BE70CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A71FD12E1FB75EE600BE70CB /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A724964D1FBA5107009E761F /* selfLoginTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = selfLoginTest.entitlements; sourceTree = "<group>"; };
+		A724964E1FBB32FE009E761F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7258E6C1FB8D6480075B557 /* Road scenery Galaxy S8 Wallpapers copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Road scenery Galaxy S8 Wallpapers copy.jpg"; sourceTree = "<group>"; };
 		A7258E8C1FB8DD8D0075B557 /* StartLoginOrSigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLoginOrSigninViewController.swift; sourceTree = "<group>"; };
 		A7258E921FB8E2C30075B557 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -68,8 +71,8 @@
 		A75F58621FB2674B006C39A5 /* b146263e11ec6f7ba36550057e2e2ff0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b146263e11ec6f7ba36550057e2e2ff0.jpg; sourceTree = "<group>"; };
 		A75F58641FB26DA2006C39A5 /* buttonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonView.swift; sourceTree = "<group>"; };
 		A75F58661FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg"; sourceTree = "<group>"; };
-		A75F58681FB2BA45006C39A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A75F586B1FB2BDCB006C39A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7DFD2651FBDFC5F00132175 /* ServiceSwiftKeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSwiftKeychainWrapper.swift; sourceTree = "<group>"; };
 		D4CC65118EFF58AD98408814 /* Pods-selfLoginTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfLoginTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-selfLoginTest/Pods-selfLoginTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DB11521684593FCDA1F1E6BA /* Pods_selfLoginTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_selfLoginTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +112,7 @@
 				A71FD12E1FB75EE600BE70CB /* DataService.swift */,
 				A7258E921FB8E2C30075B557 /* TextFieldExtension.swift */,
 				A7258E941FB8E3470075B557 /* ButtonExtension.swift */,
+				A7DFD2651FBDFC5F00132175 /* ServiceSwiftKeychainWrapper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -135,6 +139,7 @@
 		A75F583B1FB20DC5006C39A5 /* selfLoginTest */ = {
 			isa = PBXGroup;
 			children = (
+				A724964D1FBA5107009E761F /* selfLoginTest.entitlements */,
 				A71FD12D1FB75EC700BE70CB /* Services */,
 				A75F586A1FB2BDC0006C39A5 /* Utils */,
 				A75F58591FB25C08006C39A5 /* Model */,
@@ -145,7 +150,7 @@
 				A75F58431FB20DC5006C39A5 /* Assets.xcassets */,
 				A75F58451FB20DC5006C39A5 /* LaunchScreen.storyboard */,
 				A75F58481FB20DC5006C39A5 /* Info.plist */,
-				A75F58681FB2BA45006C39A5 /* GoogleService-Info.plist */,
+				A724964E1FBB32FE009E761F /* GoogleService-Info.plist */,
 			);
 			path = selfLoginTest;
 			sourceTree = "<group>";
@@ -241,6 +246,11 @@
 					A75F58381FB20DC5006C39A5 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -273,13 +283,13 @@
 				A75F58531FB234A5006C39A5 /* clay-banks-294117.jpg in Resources */,
 				A72626E51FB8D261000CA5A4 /* Road scenery Galaxy S8 Wallpapers.jpg in Resources */,
 				A75F58551FB257B3006C39A5 /* w-7156.jpg in Resources */,
+				A724964F1FBB32FE009E761F /* GoogleService-Info.plist in Resources */,
 				A75F585B1FB25F2F006C39A5 /* 6c42bfd980efe92add899a6128ed4b05--travel-maps-travel-bug.jpg in Resources */,
 				A75F58611FB266B5006C39A5 /* b174ca6f3ed7a9a9fcead9796d00cac8.jpg in Resources */,
 				A75F58631FB2674B006C39A5 /* b146263e11ec6f7ba36550057e2e2ff0.jpg in Resources */,
 				A75F58421FB20DC5006C39A5 /* Main.storyboard in Resources */,
 				A75F58571FB25B27006C39A5 /* 376255.jpg in Resources */,
 				A75F58671FB2B1C2006C39A5 /* 556c83b791f3f8325a657fed2c7bee59--iphone--wallpaper-phone-wallpapers.jpg in Resources */,
-				A75F58691FB2BA45006C39A5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +377,7 @@
 				A711E2681FB76CB800236DAD /* Users.swift in Sources */,
 				A75F58501FB232C6006C39A5 /* mainView.swift in Sources */,
 				A75F586C1FB2BDCB006C39A5 /* Constants.swift in Sources */,
+				A7DFD2661FBDFC5F00132175 /* ServiceSwiftKeychainWrapper.swift in Sources */,
 				A75F585F1FB264AF006C39A5 /* emailTextField.swift in Sources */,
 				A75F583F1FB20DC5006C39A5 /* ViewController.swift in Sources */,
 				A7258E951FB8E3470075B557 /* ButtonExtension.swift in Sources */,
@@ -514,6 +525,7 @@
 			baseConfigurationReference = D4CC65118EFF58AD98408814 /* Pods-selfLoginTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = selfLoginTest/selfLoginTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVL2SV8VV7;
 				INFOPLIST_FILE = selfLoginTest/Info.plist;
@@ -531,6 +543,7 @@
 			baseConfigurationReference = 03941412AD77ED5DE4F72359 /* Pods-selfLoginTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = selfLoginTest/selfLoginTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVL2SV8VV7;
 				INFOPLIST_FILE = selfLoginTest/Info.plist;
